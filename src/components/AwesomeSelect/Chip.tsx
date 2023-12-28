@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { ChipLabel } from './ChipLabel'
 
-import './chip.css'
+import './Chip.css'
 
 import { XIcon } from './icons/XIcon'
 

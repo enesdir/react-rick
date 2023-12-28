@@ -1,0 +1,10 @@
+[[redirects]]
+  from="/*"
+  to="/index.html"
+  status=200
+
+[build]
+  command = 'npm build'
+
+[build.environment]
+  NODE_VERSION="18"

@@ -1,0 +1,35 @@
+.search-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+  min-height: 22px;
+  position: relative;
+}
+
+.search-wrapper input {
+  flex-grow: 1;
+  border: none;
+  margin-top: 3px;
+  background: transparent;
+  appearance: none;
+}
+
+.search-wrapper input:focus {
+  outline: none;
+}
+
+.icon-down-dir {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+}
+
+.rotate-0 {
+  transform: rotate(0deg);
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}

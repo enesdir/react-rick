@@ -1,0 +1,7 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo 'running pre-commiting checks...'
+
+npm run lint-staged --shell
+npm run check:turbo

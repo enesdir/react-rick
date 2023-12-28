@@ -1,0 +1,15 @@
+node_modules
+/.cache
+.eslintignore
+.gitignore
+.git
+LICENSE
+build
+dist
+dev-dist
+
+package-lock.json
+pnpm-lock.yaml
+pnpm-workspace.yaml
+
+.DS_Store

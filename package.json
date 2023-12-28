@@ -9,7 +9,7 @@
 		"npm": ">=9"
 	},
 	"scripts": {
-		"build": "npm run type-check && vite build",
+		"build": "vite build",
 		"build:turbo": "npx turbo build",
 		"check:turbo": "npx turbo lint type-check",
 		"dev": "vite",

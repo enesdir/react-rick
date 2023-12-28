@@ -34,6 +34,10 @@
   overflow-y: auto;
 }
 
+.options-no-data{
+  color: rgb(234 26 26);
+}
+
 .option-content {
   flex: 1 1 auto;
   min-width: 0;

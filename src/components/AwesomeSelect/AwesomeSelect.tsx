@@ -1,16 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { forwardRef, useCallback, useEffect, useRef, useState } from 'react'
 
-// import type { HTMLDivElement } from 'react'
-
 import './AwesomeSelect.css'
 
 import { useOnClickOutside } from '@/hooks/useOnClickOutside'
-import { Option } from '../AwesomeSelect2'
 import { DropDown } from './DropDown'
 import { SearchInput } from './SearchInput'
 
-import type { AwesomeSelectProps } from './types'
+import type { AwesomeSelectProps, Option } from './types'
 
 export const AwesomeSelect = forwardRef<HTMLDivElement, AwesomeSelectProps>(
 	(

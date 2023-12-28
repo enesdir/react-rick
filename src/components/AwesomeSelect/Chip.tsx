@@ -5,6 +5,10 @@ import './chip.css'
 
 import { XIcon } from './icon/XIcon'
 
+type ChipProps = {
+	text: string
+	onClick: () => void
+}
 export const Chip = ({ text, onClick }: ChipProps) => {
 	return (
 		<div className='chip'>

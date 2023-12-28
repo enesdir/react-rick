@@ -81,7 +81,7 @@ export const DropDown = ({
 	}
 	const renderOptionList = () => {
 		if (data.length < 1 || !data) {
-			return <div className='dropdown-no-data'> no data found</div>
+			return <div className='options-no-data'> no data found</div>
 		}
 		return <ul className={`option-container`}> {!groupBy ? renderNormalOption() : renderGroupByOptions()}</ul>
 	}

@@ -5,7 +5,6 @@
 			"outputs": ["*.tsbuildinfo"]
 		},
 		"build": {
-			"dependsOn": ["type-check"],
 			"outputs": ["dist/**", "public/**"],
 			"env": ["VITE_API_URL"]
 		},

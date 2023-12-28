@@ -3,7 +3,7 @@ import { ChipLabel } from './ChipLabel'
 
 import './chip.css'
 
-import { XIcon } from './icon/XIcon'
+import { XIcon } from './icons/XIcon'
 
 type ChipProps = {
 	text: string

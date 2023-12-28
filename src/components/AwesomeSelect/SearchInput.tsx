@@ -6,7 +6,7 @@ import type { ChangeEventHandler, FocusEventHandler } from 'react'
 import './SearchInput.css'
 
 import { Chips } from './Chips'
-import { DownArrow } from './icon/DownArrow'
+import { DownArrow } from './icons/DownArrow'
 
 import type { AwesomeSelectProps } from './types'
 

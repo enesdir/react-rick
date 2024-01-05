@@ -35,32 +35,31 @@ const vitePluginPWA = () =>
 	})
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => {
-	return {
-		// vite config
-		plugins: [million.vite({ auto: true }), react(), Inspect(), vitePluginPWA()],
-		server: {
-			open: false,
-			strictPort: true,
-			port: 3000, // you can replace this port with any port
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export default defineConfig({
+	// vite config
+	plugins: [million.vite({ auto: true }), react(), Inspect(), vitePluginPWA()],
+	server: {
+		open: false,
+		strictPort: true,
+		port: 3000, // you can replace this port with any port
+	},
+	resolve: {
+		alias: {
+			'@': resolve(__dirname, './src'),
+			'~': resolve(__dirname, './'),
 		},
-		resolve: {
-			alias: {
-				'@': resolve(__dirname, './src'),
-				'~': resolve(__dirname, './'),
+	},
+	esbuild: {
+		loader: 'tsx',
+		include: 'src/**/*.{ts,tsx,js,jsx}',
+	},
+	optimizeDeps: {
+		esbuildOptions: {
+			loader: {
+				'.js': 'jsx',
+				'.ts': 'tsx',
 			},
 		},
-		esbuild: {
-			loader: 'tsx',
-			include: 'src/**/*.{ts,tsx,js,jsx}',
-		},
-		optimizeDeps: {
-			esbuildOptions: {
-				loader: {
-					'.js': 'jsx',
-					'.ts': 'tsx',
-				},
-			},
-		},
-	}
+	},
 })

@@ -5,8 +5,7 @@
 			"outputs": ["*.tsbuildinfo"]
 		},
 		"build": {
-			"outputs": ["dist/**", "public/**"],
-			"env": ["VITE_API_URL"]
+			"outputs": ["dist/**", "public/**"]
 		},
 		"lint": {
 			"outputs": [],

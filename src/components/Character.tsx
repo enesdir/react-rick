@@ -1,13 +1,14 @@
 import { useCallback, useState } from 'react'
-
-import { AwesomeSelect } from './AwesomeSelect/AwesomeSelect'
+import { Select } from 'react-select-light'
 
 export const Character = () => {
 	const [loading, setLoading] = useState(false)
+	const [isError, setIsError] = useState(false)
 	const [searchResults, setSearchResults] = useState([])
-	const handleQueryChange = useCallback(async (searchQuery) => {
+	const handleQueryChange = useCallback(async (searchQuery: string) => {
 		if (searchQuery) {
 			setLoading(true)
+			setIsError(false)
 			try {
 				// Simulating API call
 				const response = await fetch(`https://rickandmortyapi.com/api/character/?name=${searchQuery}`)
@@ -15,8 +16,10 @@ export const Character = () => {
 				console.log(data)
 				setSearchResults(data.results)
 				setLoading(false)
+				setIsError(false)
 			} catch (error) {
 				// Handle error
+				setIsError(true)
 				setLoading(false)
 			}
 		} else {
@@ -42,14 +45,16 @@ export const Character = () => {
 	}
 	return (
 		<>
-			<AwesomeSelect
+			<Select
 				options={searchResults}
 				isMulti
 				isShowCheckbox
 				isLoading={loading}
+				isError={isError}
 				onSearch={handleQueryChange}
 				displayValue='name'
 				imgValue='image'
+				descriptionValue='episode'
 				isObject
 				optionValueDecorator={highlightSearchInput}
 				// groupBy='label'
